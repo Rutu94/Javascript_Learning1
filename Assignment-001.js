@@ -1,3 +1,7 @@
+
+console.log(----Assigmnment on datatype variable -----------);
+
+
 let studentName ='smita';
 let studenAge = 20; 
 let studentgrade = 'A';
