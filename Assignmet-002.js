@@ -1,7 +1,7 @@
-//signments On Operators
+/*Asignments On Operators and conditional Statement 
 =============================
-Guess the output?
----------------------
+Guess the output?*/
+
 console.log(1 + "2" + 3); //123
 console.log(1 + 2 + "3");//33
 console.log("5" * true);//5
@@ -29,9 +29,9 @@ ull → falsy
 undefined → falsy
 "Playwright" → truthy */
 
------------------------------------------------------------------
+\*-----------------------------------------------------------------
 JavaScript Practice: Type Coercion & Explicit Conversion
-===========================================================
+===========================================================*/
 
 /*Problem 1 — UI Price and Quantity
 A product page returns the following values as strings:
@@ -168,12 +168,57 @@ Conditional Satements Program
 =================================
 Assignment1: 
 Problem: 
-Write a JavaScript program to check whether a number is even or odd. 
+Write a JavaScript program to check whether a number is even or odd.
 
-Assignment2: 
+let num1 = 4;
+if (num1 % 2 === 0)
+{
+    console.log(num1 + " is even number");
+    
+}
+else {
+    console.log(num1 + "is odd numbers");
+    
+}
+/*---------------------
+
+//Assignment2: 
 Problem: 
 Print the day of the week based on number (1–7). 
-What you will use here? If-else or switch case? 
+What you will use here? If-else or switch case? */
+
+
+let dayofweek = "Tuesday".toLocaleLowerCase();
+switch (dayofweek) 
+{
+    case  'monday':
+        console.log("Monday");
+        break;
+    case  "tuesday" :
+    console.log("tuesday");
+         break;
+    case  "wedensday":
+        console.log("Wedensday");
+        break;
+    case  "thuresday" :
+        console.log("thruesday");
+        break;
+    case  "friday":
+         console.log("friday");
+        break;
+    case  "Saturday" :
+            console.log("saturday");
+        break;
+    case  "Sunday" :
+           console.log("Sunday");
+        break;
+    default:
+        console.log("invalid day");
+        
+        break;
+}
+
+/*---------------------------------------
 
 Assignment 3: 
 Problem: Write .js script that evaluates a test case result based on HTTP 
@@ -190,8 +235,51 @@ If response Code is 200-299→print: successful
 If response Code is 300-399→print: Redirectional  
 If response Code is 400-499 →print: Client Error 
 If response Code is 500-599→print: Server Error For any other code →print 
-Unkown Status code  
-4.Run script using node testResult.js  
+Unkown Status code */
+
+
+let statuscode = 200;
+let resposecode = 450;
+
+if (statuscode === 200)
+{
+    if (resposecode >=100 && resposecode<=199)
+        {
+        console.log("informational")
+        
+        }
+    else if(resposecode >=200 && resposecode<=299)
+       {
+console.log("Succesfull")
+       }
+    else if (resposecode >=300 && resposecode<=399)
+      {
+      console.log("Redirectional")
+     
+      }
+        else if (resposecode >=400 && resposecode<= 499)
+        {
+console.log("Clienteroor");
+
+        }
+         else if (resposecode >=500 && resposecode<= 599)
+        {
+      console.log("Servererror");
+        }
+         else
+        {
+        console.log("unknow STATUS");
+
+        }
+    
+      
+
+}
+
+
+
+
+/*4.Run script using node testResult.js  
 
 Assignment 4
 Problem:  Write a script that suggests what clothing to wear based on the 
@@ -206,10 +294,34 @@ suggestion based on the temperature
 If temperature is above 35°C Print: wear light cotton clothes  
 ◦ If temperature is between 20°C and 35°C Pint: Normal casual wear  
 ○ If temperature is between 10°C and 19°C Print: Wear a jacket  
-○ If temperature is below 10°C Print: stay indoors, it's too cold! Run the script 
+*/○ If temperature is below 10°C Print: stay indoors, it's too cold! Run the script 
 using: node weather.js  
-Test Cases to Try: • temperature = 40 • temperature = 28 . temperature- 15  
+Test Cases to Try: • temperature = 40 • temperature = 28 . temperature- 15  */
 
+let temp = -28 ;
+if (temp >35)
+{
+    console.log("wear light cotton clothes");
+
+
+}
+else if (temp>=20 && temp <=35 )
+{
+    console.log("Normal casual wear");
+    
+}
+else if (temp>=10 && temp <=19 )
+{
+    console.log("Wear a jacket");
+    
+} else if (temp <= 10 )
+{
+    console.log("stay indoors, it's too cold!");
+}
+
+
+
+/*
 Assignment5:  
 Problem: Create a Javascript that checks whether the given username and 
 password match the predefined login credentials using simple variables 
@@ -224,4 +336,23 @@ const correctusername = "admin@emalil.com",
 const correctPassword = "admin@123";  
 3. Use an if...else statement to compare: If both enteredusername and 
 enteredPassword match the correct credentials, print: Login Successful 
-Otherwise, print: Invalid credentials Run the script using: node login.js
+Otherwise, print: Invalid credentials Run the script using: node login.js*/
+
+let enterdusername = "Smita";
+let enterdPassword = "Jagdale@123";
+
+//enterdusername = "admin@emalil.com"; 
+//enterdPassword = "admin@123";
+
+const correctusername = "admin@emalil.com";  
+const correctPassword = "admin@123";
+
+if (enterdusername === correctusername)
+{
+    console.log("Login Successful");
+    
+} else 
+{
+    console.log("Invalid credentials");
+    
+}
