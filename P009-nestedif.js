@@ -1,37 +1,30 @@
-let statuscode = 200;
-let resposecode = 450;
+/*Problem Statement:
+Write a JavaScript program to determine a student's grade based on their marks.
 
-if (statuscode === 200)
+If marks are greater than or equal to 95, display "A++ Grade".
+If marks are greater than or equal to 90 but less than 95, display "A Grade".
+Otherwise, display "B Grade".
+*/
+
+let marks=80;
+
+if(marks>=90)
 {
-    if (resposecode >=100 && resposecode<=199)
-        {
-        console.log("informational")
+    if(marks>=95)
+    {
+        console.log("A++");
         
-        }
-    else if(resposecode >=200 && resposecode<=299)
-       {
-console.log("Succesfull")
-       }
-    else if (resposecode >=300 && resposecode<=399)
-      {
-      console.log("Redirectional")
-     
-      }
-        else if (resposecode >=400 && resposecode<= 499)
-        {
-console.log("Clienteroor");
-
-        }
-         else if (resposecode >=500 && resposecode<= 599)
-        {
-      console.log("Servererror");
-        }
-         else
-        {
-        console.log("unknow STATUS");
-
-        }
+    }
+    else
+    {
+        console.log("A");
+        
+    }
+}else{
+    console.log("B");
     
-      
-
 }
+
+
+
+
