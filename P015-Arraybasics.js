@@ -28,8 +28,15 @@ Iteration techniques
 2.for...of loop---applicable for string and array
 
 3.for...in loop--applicable for object
-
 */
+/* Why does [1, 2] == [1, 2] return false in JavaScript?.
+console.log([1, 2] == [1, 2]);  // false
+console.log([1, 2] === [1, 2]); // false
+
+in JavaScript, arrays are objects, and objects are compared by reference, not by value.
+Each [1, 2] creates a new array in memory.
+Even though the contents are the same, they are stored at different memory locations*/
+
 
 console.log("-----Array Literal------");
 
