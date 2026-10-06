@@ -8,7 +8,6 @@ Functions
 
 
 */
-
 console.log("--------Function without any parameter------");
 
 function test1()//0 parameter

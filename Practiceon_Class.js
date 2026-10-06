@@ -263,21 +263,134 @@ calculator.Divide (100, 10) );
 Create 4 tester objects.
 
 Example:
-
 Amit   3 years
 Priya  7 years
 Rahul  5 years
 Sneha  2 years
 
 Tasks:
-
 Print all tester names.
 Print testers having experience >= 5.
 Find the tester having maximum experience.
 Add "Playwright" to Priya's skills.*/
 
+let testers = [
+    {
+        name: "Amit",
+        experience: 3,
+
+    },
+    {
+        name: "Priya",
+        experience: 7,
+    },
+    {
+        name: "Rahul",
+        experience: 5,
+        
+    },
+    {
+        name: "Sneha",
+        experience: 2,
+       
+    }
+]
+
+for ( let faname of testers)
+    {
+
+    console.log(faname.name );
+    console.log(faname.experience);
+  
+}
+
+for (let tester of testers)
+
+    {
+ if(tester.experience >= 5){
+
+    console.log(tester.name);
+ }
+   }
+
+ /*let maxexp1 = testers[0];
+
+   for (let tester of testers)
+   {
+if (tester.experience >maxexp1.experience){
+     maxexp1 = tester;
+   console.log(tester.name);
+}
 
 
+  }
+
+
+  for (let tester of testers) {
+    if (tester.name === "Priya") {
+        tester.skills.push("Playwright");
+    }
+}
+
+console.log(testers[1]);
+*/
+
+
+//using array method 
+/*
+Create 4 tester objects.
+
+Example:
+Amit   3 years
+Priya  7 years
+Rahul  5 years
+Sneha  2 years
+
+Tasks:
+Print all tester names.
+Print testers having experience >= 5.
+Find the tester having maximum experience.
+Add "Playwright" to Priya's skills.*/
+
+let testers1 = [
+{
+    name : "Amit",
+    exp : 3
+},
+{
+    name : "priya",
+    exp : 7
+},
+{
+    name : "rahul",
+    exp : 5
+},
+{
+    name : "sneha",
+    exp : 2
+}
+]
+
+testers1.forEach(testername => {
+    console.log(testername.name);
+});
+
+
+let testermaxexp = testers1.filter(testername => testername.exp>= 5 );
+console.log(testermaxexp);
+
+let maxexptest = testers1.reduce((initial, tester) => {
+
+    if (tester.exp > initial.exp) {
+        return tester;
+    } else {
+        return initial;
+    }
+
+}, testers1[0]);
+
+console.log(maxexptest);
+    
 
 
 
@@ -289,3 +402,20 @@ Add "Playwright" to Priya's skills.*/
 /*Create a base class Shape with a color property. Then create a subclass Circle that extends Shape and adds a radius property and a getArea() method.
 
 JavaScript */
+
+/*Create a static object student:
+
+const student = {
+    name: "Rahul",
+    age: 25,
+    course: "JavaScript",
+    marks: 85
+};
+
+Tasks:
+
+Print the student name.
+Print the age.
+Print the course.
+Print the marks.
+Print all object values.*/

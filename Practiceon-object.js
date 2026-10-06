@@ -563,53 +563,85 @@ Change project status to "Completed".
 Add client: "ABC Bank" inside project.
 Print the complete object.*/
 
+const employee2 = {
+    name: "Amit",
+    experience: 7,
+
+    project: {
+        name: "Banking Application",
+        domain: "Capital Market",
+        status: "Active"
+    }
+};
+
+console.log(employee2.name);
+console.log(employee2.project.name);
+employee2.project.status = "completed";
+employee2.project.client = "ABC Bank" ;
+console.log(employee2);
+
 
 /*Convert this object into a JSON string and print it.
 
-let employee = {
+Task:
+Hint - JSON.parse()
+Convert object → JSON string
+Print the result
+Print its typeof*/
+
+let employ1 = {
     name: "Priya",
     age: 28,
     role: "Tester"
 };
 
-Task:
+let jstoJson = JSON.stringify(employ1);
+console.log(jstoJson);
+console.log(typeof jstoJson);
 
-Convert object → JSON string
-Print the result
-Print its typeof*/
+
 
 
 /*JSON String → Object
-let data = '{"name":"Rahul","experience":5,"role":"Developer"}';
 
 Task:
-
 Convert the JSON string into an object.
 Print name.
 Print experience.
 Print role.*/
 
+let data = '{"name":"Rahul","experience":5,"role":"Developer"}';
+
+let jsontoJs = JSON.parse (data);
+console.log(jsontoJs);
+console.log(typeof jsontoJs);
+
 
 /*3. Object → Keys
-let tester = {
+
+Task:
+Convert the object into an array of keys.
+Print the keys.*/
+
+let tester2 = {
     name: "Smita",
     experience: 7,
     skill: "Manual Testing",
     location: "Hyderabad"
 };
 
-Task:
+let result = Object.keys(tester2) ;//return array
+console.log(result);
 
-Convert the object into an array of keys.
-Print the keys.*/
+
+let result2= Object.values(tester2);
+console.log(result2);
+
+
+
 
 
 /*Object → JSON → Object
-let employee = {
-    name: "Smita",
-    role: "QA",
-    experience: 7
-};
 
 Perform these steps:
 
@@ -619,9 +651,23 @@ Convert JSON string → object.
 Print name.
 Print role.*/
 
-/*You receive API response data as a JSON string:
+let Aemployee = {
+    name: "Smita",
+    role: "QA",
+    experience: 7
+};
 
-let response = '{"status":"Pass","testCase":"TC101","tester":"Smita"}';
+let JSONconvert = JSON.stringify(Aemployee); // Object → JSON String
+console.log(JSONconvert);
+console.log(typeof JSONconvert);
+
+let JSobject = JSON.parse(JSONconvert);
+console.log(JSobject);
+
+console.log(JSobject.name);
+
+
+/*You receive API response data as a JSON string:
 
 Tasks:
 
@@ -632,3 +678,21 @@ Print tester.
 Change status from "Pass" to "Fail".
 Convert the modified object back to JSON string.
 Print the final JSON string.*/
+
+
+
+let response = '{"status":"Pass","testCase":"TC101","tester":"Smita"}';
+
+let JSobject1 = JSON.parse(response);
+console.log(JSobject1);
+console.log(JSobject1.status);
+console.log(JSobject1.testCase);
+console.log(JSobject1.tester);
+ JSobject1.status = "Fail";
+console.log(JSobject1);
+
+let ModifyJSon = JSON.stringify(JSobject1)
+console.log(ModifyJSon);
+
+
+

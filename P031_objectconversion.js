@@ -3,6 +3,9 @@
 /*
 1. JsObject-----> converting into JSON string
 stringify()
+syntatx 
+
+JSON.strigyfy 
 ------------
 Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
 
